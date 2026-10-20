@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "description": "COC7 空白卡（丛雨）的网页版：照原表运行公式和校验，导出与原 xlsx 一致",
+  "license": "MIT",
   "scripts": {
     "build": "node tools/build.mjs",
     "test": "node --test test/"

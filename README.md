@@ -22,3 +22,7 @@ npm test
 
 内置的 `COC7空白卡CY23.2.xlsx` 和 `COC7空白卡CY23Final.xlsx` 是丛雨制作的（原卡由秋叶EXODUS制作），版权归原作者，不在本仓库代码的授权范围内。
 
+
+## License
+
+代码采用 [MIT](LICENSE) 许可。
