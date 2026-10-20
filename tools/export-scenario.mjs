@@ -1,0 +1,11 @@
+import { readFileSync, writeFileSync } from 'node:fs';
+import { Doc } from '../src/core/doc.js';
+import { exportXlsx } from '../src/core/export.js';
+import { applyScenario } from '../test/scenario.mjs';
+const out = process.argv[2];
+const doc = new Doc(readFileSync('COC7空白卡CY23.2.xlsx'));
+applyScenario(doc);
+const r = exportXlsx(doc, { modifiedBy: '玩家甲', modified: new Date('2026-10-19T10:00:00Z'), saveView: true, activeSheet: 0, selection: { si: 0, r1: 3, c1: 5, r2: 3, c2: 17, ar: 3, ac: 5 } });
+writeFileSync(out, r.bytes);
+console.log('parts:', r.parts.join(', '));
+console.log('changed cells:', r.changedCells.length, r.changedCells.slice(0, 30).join(' '));
